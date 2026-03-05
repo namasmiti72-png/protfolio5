@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Smiti Nama | Developer Portfolio</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(270deg,#0f2027,#203a43,#2c5364);
+background-size:600% 600%;
+animation:bg 10s ease infinite;
+color:white;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 60px;
+background:#00000080;
+backdrop-filter:blur(10px);
+position:sticky;
+top:0;
+}
+
+nav h2{
+color:#00ffd5;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:5px solid #00ffd5;
+object-fit:cover;
+box-shadow:0 0 25px #00ffd5;
+}
+
+.hero h1{
+font-size:40px;
+margin-top:20px;
+}
+
+.typing{
+color:#00ffd5;
+font-size:24px;
+margin-top:10px;
+}
+
+section{
+padding:70px 20px;
+text-align:center;
+}
+
+.card{
+background:rgba(0,0,0,0.5);
+padding:30px;
+border-radius:15px;
+max-width:700px;
+margin:auto;
+margin-top:30px;
+backdrop-filter:blur(10px);
+}
+
+.skills span{
+display:inline-block;
+background:#00ffd5;
+color:black;
+padding:10px 20px;
+margin:8px;
+border-radius:30px;
+font-weight:bold;
+}
+
+.project{
+background:#111;
+padding:20px;
+margin:15px auto;
+border-radius:10px;
+max-width:500px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:scale(1.05);
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#00000080;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>Smiti Nama</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<div class="hero">
+
+<img src="portfolio img.jpeg" alt="Smiti Nama">
+
+<h1>Smiti Nama</h1>
+
+<div class="typing" id="typing"></div>
+
+</div>
+
+
+<section id="about">
+
+<h2>About Me</h2>
+
+<div class="card">
+
+<p>
+Hello! I'm <b>Smiti Nama</b>.  
+I am a passionate <b>Web Developer & Website Designer</b>.  
+I create modern websites, portfolio websites and online shopping websites.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="skills">
+
+<h2>My Skills</h2>
+
+<div class="skills">
+
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Web Design</span>
+<span>Data Entry</span>
+
+</div>
+
+</section>
+
+
+<section id="projects">
+
+<h2>Projects</h2>
+
+<div class="project">
+Online Shopping Website
+</div>
+
+<div class="project">
+Portfolio Website
+</div>
+
+<div class="project">
+Business Website
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<div class="card">
+
+<p>Email: smitinama8@gmail.com</p>
+
+<p>Phone: 8414857120</p>
+
+<p>Address: Sabroom, South Tripura, 799156</p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Smiti Nama | Professional Developer
+
+</footer>
+
+
+<script>
+
+const text=[
+"Professional Web Developer",
+"Website Designer",
+"Frontend Developer"
+];
+
+let count=0;
+let index=0;
+let currentText="";
+let letter="";
+
+(function type(){
+
+if(count===text.length){
+count=0;
+}
+
+currentText=text[count];
+letter=currentText.slice(0,++index);
+
+document.getElementById("typing").textContent=letter;
+
+if(letter.length===currentText.length){
+count++;
+index=0;
+}
+
+setTimeout(type,120);
+
+})();
+
+</script>
+
+</body>
+</html>
